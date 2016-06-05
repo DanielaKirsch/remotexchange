@@ -34,7 +34,7 @@ $file_handle = fopen($tasklist, 'r');
 	while (!feof($file_handle)) {
 	 
 	  $line = fgets($file_handle);
-	  array_push($arraytasks, $line);	 
+	  array_push($arraytasks, trim($line));	 
 	}
 	 
 	fclose($file_handle);
@@ -46,12 +46,14 @@ $file_handle = fopen($taskdone, 'r');
 	while (!feof($file_handle)) {
 	 
 	  $line = fgets($file_handle);
-	  array_push($arraydone, $line);	 
+
+	  array_push($arraydone, trim($line));	 
 	}
 	 
 	fclose($file_handle);
 
 $todo = array_diff($arraytasks, $arraydone);
+
 
 $updatefiledone = "";
 
