@@ -47,7 +47,7 @@ for ($i=0; $i < count($todo); $i++) {
 
 
 		copy($locallarge.$myfilename, $dropboxlarge.$myfilename);
-		chmod($dropboxlarge.$myfilename, 777);
+		chmod($dropboxlarge.$myfilename, 0777);
 
 		$updatefiledone .= $myfilename."\n";
 	}
