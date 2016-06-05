@@ -23,6 +23,6 @@ $locallarge = $myrootfolder.'cfdalargeincoming/';
 // folder for dropboxfiles
 $dropboxlarge = $myrootfolder.$mydropboxfolder.'0cfdalarge/';
 
-
+$templargefolder =$myrootfolder.'templargefolder/';
 
 ?>
