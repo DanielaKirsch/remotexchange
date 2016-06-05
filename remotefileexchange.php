@@ -21,7 +21,7 @@ foreach ($newthumbs as $key => $value) {
 	
 		copy($locallarge.$value, $templargefolder.$value);
 
-		shell_exec('mogrify -resize 500 '.$templargefolder.$value);
+		shell_exec('/usr/local/bin/mogrify -resize 500 '.$templargefolder.$value);
 
 		copy($templargefolder.$value, $thumbnailfolder.$value);
 }
