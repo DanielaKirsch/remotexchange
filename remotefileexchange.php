@@ -42,10 +42,15 @@ for ($i=0; $i < count($todo); $i++) {
 	//print_r("nohup cp ".$locallarge.$todo[$i]" ".$dropboxlarge.$todo[$i]" > /dev/null &");
 	// shell_exec("nohup cp ".$locallarge.$myfilename." ".$dropboxlarge.$myfilename." > /dev/null &");
 	// shell_exec("nohup chmod 777 ".$dropboxlarge.$myfilename." > /dev/null &");
-	copy($locallarge.$myfilename, $dropboxlarge.$myfilename);
-	chmod($dropboxlarge.$myfilename, 777);
+	
+	if($myfilename != "" && file_exists($locallarge.$myfilename)) {
 
-	$updatefiledone .= $myfilename."\n";
+
+		copy($locallarge.$myfilename, $dropboxlarge.$myfilename);
+		chmod($dropboxlarge.$myfilename, 777);
+
+		$updatefiledone .= $myfilename."\n";
+	}
 
 
 }
